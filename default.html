@@ -24,53 +24,41 @@
             <h1 class="site-title"><a href="/"><img src="http://theriseandshineacademy.com/sites/all/themes/riseandshine/logo.png?1390323892"></a></h1>
             <section>
               <ul class="page-menu">
-              {% for page in site.pages %}
-                <li><a href="{{page.url}}"{% if page.url == url %} class="is-current-page"{% endif %}>{{page.title}}</a></li>
-              {% endfor %}
+                {% for page in site.pages %}
+                  <li><a href="{{page.url}}"{% if page.url == url %} class="is-current-page active"{% endif %}>{{page.title}}</a></li>
+                {% endfor %}
+                
               </ul>
+              <div class="social-media-sites clearfix">
+                <div class="clearfix">
+                  <a href="http://www.facebook.com/TheRiseandShineSportsAcademy" class="follow-link" title="Follow The Rise and Shine Sports Academy on Facebook">Facebook</a>
+                  <a href="http://www.twitter.com/mrriseandshine" class="follow-link" title="Follow The Rise and Shine Sports Academy on Twitter">Twitter</a>
+                </div>
+              </div>
             </section>
           </aside>
-        
-         <h1 class="content-title">{{title}}</h1>
+          <div class="main-content-wrapper">
+            <div class="main-content">
+              <h1 class="content-title">{{title}}</h1>
 
-          {% if pages %}
-            {% comment %} Show subpages if there are any available {% endcomment %}
-            <nav class="subpage-menu">
-              {% for subpage in pages %}
-                <a href="{{subpage.url}}">{{subpage.title}}</a>
-              {% endfor %}
-            </nav>
-          {% endif %}
+                {% if pages %}
+                  {% comment %} Show subpages if there are any available {% endcomment %}
+                  <nav class="subpage-menu">
+                    {% for subpage in pages %}
+                      <a href="{{subpage.url}}">{{subpage.title}}</a>
+                    {% endfor %}
+                  </nav>
+                {% endif %}
 
-          {{body}}
+                {{body}}
 
-          {% if type == "post" %}
-            {% comment %} Show tagsets if this is a post {% endcomment %}
 
-            {% for tagset in taxonomy %}
-              <strong>{{tagset.key}} ({{tagset | size}} tags)</strong>
-              <ul>
-                {% for tag in tagset %}
-                  <li><a href="{{tag.url}}">{{tag.value}}</a></li>
-                {% endfor %}
-              </ul>
-            {% endfor %}
-
-          {% else %}
-            {% comment %} Loop through any posts and show an excerpt {% endcomment %}
-            {% for post in posts %}
-              <article class="post-preview">
-                <h2><a href="{{post.url}}">{{post.title}}</a></h2>
-                {{post.body | strip_html | truncatewords: 100}}
-                <p><a href="{{post.url}}">View post</a>
-              </article>
-            {% endfor %}
-
-          {% endif %}
-
-          {% if parent %}
-            <p><a href="{{parent.url}}">&larr; Back to {{parent.title}}</a></p>
-          {% endif %}
+                {% if parent %}
+                  <p><a href="{{parent.url}}">&larr; Back to {{parent.title}}</a></p>
+                {% endif %}    
+            </div>
+          </div>
+         
         
         
         

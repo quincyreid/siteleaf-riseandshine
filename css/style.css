@@ -6,7 +6,7 @@ body{
 	line-height: 18px;
 	color: #333333;
   min-width: 1200px;
-	
+	margin: 0;
 }
 
 img, video, object{ max-width: 100% }
@@ -40,7 +40,7 @@ div.zone-content {
 }
 
 aside {
-	display: inline;
+	display: block;
 	float: left;
 	position: relative;
 	margin-left: 10px;
@@ -85,6 +85,27 @@ ul.page-menu li a {
 	margin-bottom: 1px;
 	text-transform: uppercase;
 	text-indent: 20px;
+}
+
+.social-media-sites {
+	display: block;
+	float: left;
+	height: 55px;
+	padding: 0;
+	text-indent: -9999px;
+	width: 54px;
+}
+
+.main-content-wrapper {
+	float: left;
+	position: relative;
+	margin-left: 10px;
+	margin-right: 10px;
+	width: 880px;
+}
+
+.main-content {
+	padding-left: 20px;
 }
 
 .clearfix:before, .clearfix:after {
