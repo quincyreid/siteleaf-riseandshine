@@ -25,7 +25,7 @@
             <section>
               <ul class="page-menu">
                 {% for page in site.pages %}
-                  <li><a href="{{page.url}}"{% if page.url == url %} class="is-current-page active"{% endif %}>{{page.title}}</a></li>
+                    <li><a href="{{page.url}}"{% if page.url == url %} class="is-current-page active"{% endif %}>{{page.title}}</a></li>
                 {% endfor %}
                 
               </ul>

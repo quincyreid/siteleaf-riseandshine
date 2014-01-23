@@ -51,6 +51,7 @@ aside {
 
 a {
   color: #002d62;
+	display: block;
   text-decoration: none;
 }
 
@@ -85,6 +86,15 @@ ul.page-menu li a {
 	margin-bottom: 1px;
 	text-transform: uppercase;
 	text-indent: 20px;
+}
+
+ul.page-menu a:hover {
+	background: #002d62;
+	color: #ffffff;
+}
+
+ul.page-menu a:active {
+	background: #333333;
 }
 
 .social-media-sites {
