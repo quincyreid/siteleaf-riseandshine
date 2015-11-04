@@ -15,6 +15,10 @@ article, header, nav, section {
     display: block;
 }
 
+p {
+	line-height: 2;
+}
+
 #zone-header-wrapper {
 	height: 40px;
 }
@@ -46,7 +50,7 @@ aside {
 	margin-left: 10px;
 	margin-right: 10px;
 	width: 280px;
-	
+
 }
 
 a {
